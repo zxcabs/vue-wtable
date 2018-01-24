@@ -1,6 +1,6 @@
 {
   "name": "@zxcabs/vue-wtable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue-wtable",
   "main": "lib/index.js",
   "scripts": {
@@ -46,9 +46,7 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.1"
-  },
-  "dependencies": {
+    "webpack-merge": "^4.1.1",
     "bootstrap": "^4.0.0"
   }
 }
