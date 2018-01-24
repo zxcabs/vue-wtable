@@ -17,13 +17,13 @@ module.exports = {
       'node_modules',
       path.resolve()
     ],
-    extensions: ['.js', '.vue']
+    extensions: ['.js', '.vue', '.jsx']
   },
   devtool: 'eval',
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader'
@@ -38,6 +38,17 @@ module.exports = {
             esModule: true
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
     ]
   },

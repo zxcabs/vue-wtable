@@ -17,7 +17,7 @@ module.exports = (storyConf) => {
     return !(pluginInstance instanceof HtmlWebpackPlugin);
   });
 
-  return merge(merge(conf, {
+  return merge.smart(merge.smart(conf, {
 
   }), storyConf);
 };

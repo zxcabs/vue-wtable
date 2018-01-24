@@ -1,7 +1,7 @@
 <template>
   <div class="table-layout">
     <w-table
-      class="table"
+      class="table table-sm"
       fixed
       :list="list"
       :isPending="isPending"
@@ -38,6 +38,9 @@
       <template slot="foot">
         <tr>
           <w-pagination
+              class="pagination pagination-sm"
+              liClass="page-item"
+              itemClass="page-link"
               :total="total"
               :limit="limit"
               :offset="offset"
@@ -50,8 +53,8 @@
 </template>
 
 <script>
+  import "bootstrap/dist/css/bootstrap.css"
   import { action } from '@storybook/addon-actions';
-
   import { WTable, WTh, WPagination } from '../../src/index';
 
   const DATA  = (new Array(100)).fill(0).map((v, i) => ({
@@ -165,12 +168,12 @@
   .table.fixed >>>
   thead,
   tfoot {
-    height: 28px;
+    height: 40px;
   }
 
   .table.fixed >>>
   tbody {
-    height: calc(100% - 28px * 2);
+    height: calc(100% - 40px * 2);
   }
 
   .td-index {
